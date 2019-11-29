@@ -26,7 +26,10 @@ class PokemonAdapter(private val context: Context) : RecyclerView.Adapter<Pokemo
 
         // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
 
-
+        holder.nombreTextView.text = p.name
+        Glide.with(context)
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.number}.png")
+                .into(holder.fotoImageView)
     }
 
     override fun getItemCount(): Int {
