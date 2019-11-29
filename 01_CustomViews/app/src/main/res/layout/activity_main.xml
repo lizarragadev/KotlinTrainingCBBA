@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000">
+    android:background="@drawable/fondo">
 
     <ImageView
         android:id="@+id/logo"
@@ -26,7 +26,8 @@
         android:paddingLeft="@dimen/paddingedittext"
         android:paddingRight="@dimen/paddingedittext"
         android:textColorHint="@color/textColorHint"
-        android:textColor="@color/colorBlanco" />
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/caja_texto"/>
 
     <EditText
         android:id="@+id/password"
@@ -41,7 +42,8 @@
         android:textColorHint="@color/textColorHint"
         android:textColor="@color/colorBlanco"
         android:layout_marginBottom="@dimen/margenabajo"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:background="@drawable/caja_texto"/>
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
@@ -51,7 +53,8 @@
         android:layout_marginLeft="@dimen/espaciado"
         android:textColor="@color/colorDivider"
         android:layout_marginBottom="@dimen/margenabajo"
-        android:layout_below="@id/password"/>
+        android:layout_below="@id/password"
+        android:background="@drawable/boton"/>
 
     <TextView
         android:id="@+id/texto"
@@ -124,6 +127,7 @@
         android:gravity="center_horizontal"
         android:padding="@dimen/paddingfooter"
         android:textSize="@dimen/tamaniotextosub"
-        android:textColor="@color/colorBlanco"/>
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/abajo"/>
 
 </RelativeLayout>
