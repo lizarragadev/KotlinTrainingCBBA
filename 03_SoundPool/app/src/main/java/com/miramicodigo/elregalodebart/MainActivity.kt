@@ -6,6 +6,8 @@ import android.media.AudioAttributes
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
+// MediaPlayer
+
 lateinit var spIdiota: SoundPool
 lateinit var spCallate: SoundPool
 lateinit var spVeteAlDiablo: SoundPool
@@ -31,19 +33,27 @@ open class MainActivity : AppCompatActivity() {
     }
 
     fun loadSoundPool() {
-
+        resIdiota = spIdiota.load(this, R.raw.idiota, 1)
+        resCallate = spCallate.load(this, R.raw.callate, 1)
+        resVeteAlDiablo = spVeteAlDiablo.load(this, R.raw.vete_al_diablo, 1)
     }
 
     fun idiota(v: View) {
-
+        if(resIdiota != 0) {
+            spIdiota.play(resIdiota, 1.0F, 1.0F, 0, 0, 0F)
+        }
     }
 
     fun callate(v: View) {
-
+        if(resCallate != 0) {
+            spCallate.play(resCallate, 1.0F, 1.0F, 0, 0, 0F)
+        }
     }
 
     fun veteAlDiablo(v: View) {
-
+        if(resVeteAlDiablo != 0) {
+            spVeteAlDiablo.play(resVeteAlDiablo, 1.0F, 1.0F, 0, 0, 0F)
+        }
     }
 
 }
